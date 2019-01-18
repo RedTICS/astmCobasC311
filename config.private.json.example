@@ -1,0 +1,13 @@
+{
+    "logLevel": "debug",
+    "comPort": "COM6",
+    "dbServer": "IP_ADDRESS",
+    "dbUser": "USER",
+    "dbPassword": "",
+    "dbDatabase": "DATABASE",
+    "analyzer": "cobasc311",
+    "numeroProtocolo" : "numeroTipoServicio",
+    "ANDES_HOST" : "http://localhost:3002/api",
+    "ANDES_KEY": "ANDES_KEY",
+    "ANDES_KEYlabo": "ANDES_KEYlabo"
+}

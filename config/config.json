@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "",
+    "password": "",
+    "host": "localhost",
+    "dialect": "sqlite",
+    "storage": "database.dev.sqlite",
+    "operatorsAliases": false,
+    "freezeTableName": true
+  },
+  "test": {
+    "username": "",
+    "password": "",
+    "host": "localhost",
+    "dialect": "sqlite",
+    "storage": "database.test.sqlite",
+    "operatorsAliases": false,
+    "freezeTableName": true
+  },
+  "production": {
+    "username": "",
+    "password": "",
+    "host": "localhost",
+    "dialect": "sqlite",
+    "storage": "database.prod.sqlite",
+    "operatorsAliases": false,
+    "freezeTableName": true
+  }
+}
