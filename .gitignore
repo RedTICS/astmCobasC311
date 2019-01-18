@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+
+# VS Code configuration folder
+.vscode
+ 
+# Configuration file
+config.private.json
+
+# Sqlite DB files
+database.dev.sqlite
+database.test.sqlite
+database.prod.sqlite
