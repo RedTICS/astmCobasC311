@@ -370,24 +370,17 @@ function timeoutCommunication() {
 }
 
 function runIntervalCheck() {
-    setInterval(checkDataToSend, 10000);
+    setInterval(checkDataToSend, 5000);
 };
-
 
 setTimeout(() => {
     records = ["1H|\^&|||H7600^1|||||host|RSUPL^REAL|P|1",
         "P|1|||||||U||||||^",
         "O|1|47-CR18|3070^30098^098^^QC^SC|^^^570^\^^^413^\^^^989^\^^^990^\^^^687^\^^^685^\^^^712^\^^^735^|||||||Q||||2|||||||20170102082629|||F",
         "C|1|I|^^^^|G",
-        ['R', '1', ['', '', '', '570/'], '125.02', 'mg/l', '', 'N', '', '', '', '      ', '', '', 'P1'],
-        ['R', '1', ['', '', '', '413/'], '5.3', 'mg/l', '', 'N', '', '', '', '      ', '', '', 'P1']];
+        ['R', '1', ['', '', '', '570/'], '15.02', 'mg/l', '', 'N', '', '', '', '      ', '', '', 'P1'],
+        ['R', '2', ['', '', '', '413/'], '12.7', 'mg/l', '', 'N', '', '', '', '      ', '', '', 'P1']];
     app.processResultRecords(records);
 });
-
-
-/*
-para R: en el 3er campo | en el 4to componente ^ la doc indica que va ^^^<ApplicationCode>/<Dilution>/<pre-dilution>/…
-donde <ApplicationCode> es el "host test No." =>  numero de protocolo de hasta 5 digitos
-*/
 
 // runIntervalCheck();

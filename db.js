@@ -1,10 +1,7 @@
 var config = require('./config.private');
-// var record = require("./record");
-
 var winston = require('winston');
-// var sql = require("seriate");
 const models = require('./models')
-
+const srv = require('./service/laboratorio');
 
 // SQL Server config settings
 // var dbConfig = {
@@ -49,6 +46,8 @@ function saveResult(result, order) {
         ejecucion.estado = 2;
         ejecucion.save().then(res => {
             console.log('actualizado:', res);
+            // Aqui hacer la llamada al PATCH de la API
+            runPatch(ejecucion._id, ejecucion);
         }).catch(error => {
             console.log(error);
         });
@@ -56,6 +55,14 @@ function saveResult(result, order) {
         console.log('Error en saveResult: ', error);
     });
 }
+
+async function runPatch(prestaId, registro) {
+    srv.patchCobasC311(prestaId, registro).then((data) => {
+        console.log('runPatch data:', data);
+    }).catch(err => {
+        console.log(err);
+    })
+};
 
 function hasProtocolsToSend() {
     return models.ejecuciones.count({ where: { 'estado': '0' } }).then(cantidad => {
